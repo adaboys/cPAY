@@ -2,11 +2,13 @@
   "name": "report-engine",
   "scripts": {
     "server": "cd api && node .",
-    "app": "cd app && yarn start",
+    "app": "cd app && yarn  start",
     "build": "cd app && yarn run build && cp -rf build/* ../api/client/"
   },
+
+  
   "version": "1.0.0",
-  "repository": "https://github.com/saigonbitmaster/reportEngine",
+  "repository": "https://github.com/adaboys/cPay",
   "author": "saigonBitMaster <bitmaster.sg@gmail.com>",
   "license": "MIT",
   "private": true,
