@@ -12,6 +12,7 @@
 
 #clone and run code: 
 - git clone https:/github.com/adaboys/cPay
+- cd cPay
 - yarn
 - yarn app
 - http://localhost:3001/
