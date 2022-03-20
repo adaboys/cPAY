@@ -6,9 +6,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import { DataGrid } from "@mui/x-data-grid";
 import QRCode from "react-qr-code";
 
-import data from './data/sample'
+import data from "./data/sample";
 
-let adaPay = data.adaPay
+let adaPay = data.adaPay;
 let token = process.env.REACT_APP_COTI_KEY;
 let requestPaymentUrl = process.env.REACT_APP_REQUEST_PAYMENT_URL;
 let getOrderPaymentUrl = process.env.REACT_APP_GET_PAYMENT_URL;
@@ -39,60 +39,6 @@ const initState = {
   value: value,
   sellerPayInfo: sellerPayInfo,
 };
-
-
-/* 
-const config = {
-  headers: { Authorization: `Bearer ${token}` }
-};
-
-const bodyParameters = {
- key: "value"
-};
-
-Axios.post( 
-'http://localhost:8000/api/v1/get_token_payloads',
-bodyParameters,
-config
-).then(console.log).catch(console.log);
-
-
-
-const onClick = (value) => {
-  const data = {...adaPay, amount: value};
-  console.log(data)
-
-   axios({
-    url: "https://api-sandbox.adapay.finance/payment-request",
-    method: "PUT",
-  //  headers: { Authorization: `Bearer ${token}` },
-    data: data,
-  }).then(data => console.log(data)); 
-};
-
-
-
-//ok already
-
-const onClick = (value) => {
-  const config = {
-    headers: { Authorization: `Bearer ${token}` }
-  };
-  
-  const data = {...adaPay, amount: value * 1000000};
-  
-  axios.put( 
-  'https://api-sandbox.adapay.finance/payment-request',
-  data,
-  config
-  ).then((a) => console.log(a))
-  .catch((e) => console.log(e));
-};
-
-
- */
-
-
 
 let countValue = (items, selectedItems) => {
   let itemValue = [];
@@ -237,10 +183,8 @@ function App() {
       <div>{JSON.stringify(state.sellerPayInfo)}</div>
       <div>{JSON.stringify(state)}</div>
       <div>{JSON.stringify({ ...adaPay, amount: state.value })}</div>
-     
     </div>
   );
 }
-
 
 export default App;
