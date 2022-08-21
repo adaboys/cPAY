@@ -91,7 +91,7 @@ function App() {
 
   let onCellEditCommit = (params, event) => {
     let newState = { ...state };
-    let newRows = [...state.rows];
+    let newRows   = [...state.rows];
     let newRow = newState.rows[params.id];
     newRow.quantity = params.value;
 
@@ -100,7 +100,7 @@ function App() {
 
     setState({ ...state, rows: newRows, value: value });
   };
-
+  
   let onSelectionModelChange = (model) => {
     let value = countValue(state.rows, model);
     setState({ ...state, selectedRows: model, value: value });
